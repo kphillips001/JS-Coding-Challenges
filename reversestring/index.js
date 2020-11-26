@@ -11,23 +11,23 @@ function reverse(str) {
   return str.split('').reverse().join('');
 }
 
-module.exports = reverse;
+reverse('asdf')
 
-// //#2 - Better for loop syntax
-function reverse(str) {
-  let reversed = '';
+// // //#2 - Better for loop syntax
+// function reverse(str) {
+//   let reversed = '';
 
-  for (let character of str){
-    reversed = character + reversed;
-  }
+//   for (let character of str){
+//     reversed = character + reversed;
+//   }
 
-  return reversed
-}
+//   return reversed
+// }
 
-//#3 - Complex solution
-function reverse(str) {
-  return str.split('').reduce((rev, char) => char + rev, '')
+// //#3 - Complex solution
+// function reverse(str) {
+//   return str.split('').reduce((rev, char) => char + rev, '')
   
-}
+// }
 
 module.exports = reverse;
