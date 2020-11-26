@@ -14,20 +14,20 @@ function reverse(str) {
 reverse('asdf')
 
 // // //#2 - Better for loop syntax
-// function reverse(str) {
-//   let reversed = '';
+function reverse(str) {
+  let reversed = '';
 
-//   for (let character of str){
-//     reversed = character + reversed;
+  for (let character of str){
+    reversed = character + reversed;
 //   }
 
 //   return reversed
 // }
 
 // //#3 - Complex solution
-// function reverse(str) {
-//   return str.split('').reduce((rev, char) => char + rev, '')
+function reverse(str) {
+  return str.split('').reduce((rev, char) => char + rev, '')
   
-// }
+}
 
 module.exports = reverse;
