@@ -7,6 +7,25 @@
 //   vowels('Why do you ask?') --> 4
 //   vowels('Why?') --> 0
 
-function vowels(str) {}
+// function vowels(str) {
+//   let count = 0;
+//   const checker = ['a', 'e', 'i', 'o', 'u'];
+
+//   for (let char of str.toLowerCase()) {
+//     if (checker.includes(char)) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+//g makes sure we don't stop at the first match, i stands for case insensitive
+
+function vowels(str){
+  const matches = str.match(/[aeiou]/gi)
+  //match returns an array of all the matches that are found and will return null if no matches are found so will need to handle
+  return matches ? matches.length : 0
+}
 
 module.exports = vowels;
