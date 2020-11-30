@@ -10,6 +10,24 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+class Stack {
+  //declare constructor function
+  constructor() {
+    //initialize an array
+    this.data=[];
+  }
+  //add a record to the last index of an array
+  push(record){
+    this.data.push(record);
+    //get back the most recent, or last record added
+  }
+  pop(){
+    return this.data.pop()
+  }
+  //return the last record from the array without removing it
+  peek() {
+    return this.data[this.data.length - 1]
+  }
+}
 
 module.exports = Stack;
