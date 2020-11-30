@@ -36,6 +36,26 @@ class LinkedList {
     }
     return counter; 
   }
+  //Returns the first node of the linked list.
+  getFirst() {
+    return this.head
+  }
+  //Returns the last node of the linked list. Last node will be next property with value of null. 
+  getLast(){
+    //Look out for case where linkedlist has no nodes associated with it. 
+    if(!this.head){
+      return null;
+    }
+    //Iterate through linked list and get the last node. Can identify the lasdt node by the null property. 
+    let node = this.head;
+    while(node){
+      //if not defined, return next node
+      if(!node.next){
+        return node;
+      }
+      node = node.next;
+    }
+  }
 }
 
 module.exports = { Node, LinkedList };
